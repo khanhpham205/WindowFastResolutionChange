@@ -1,8 +1,4 @@
-# Chạy script này bằng PowerShell (không cần Admin)
-# Mục đích: tạo file .lnk (shortcut) cho 2 script đổi resolution,
-# vì Windows chỉ cho pin shortcut/.exe lên Start Menu, không pin được .py trực tiếp.
-
-$pythonPath = (Get-Command python).Source   # đường dẫn tới python.exe
+$pythonPath = (Get-Command python).Source
 $scriptDir  = "C:\app\res"
 
 $targets = @(
@@ -25,5 +21,3 @@ foreach ($t in $targets) {
 
     Write-Host "Đã tạo: $shortcutPath"
 }
-
-Write-Host "`nBước tiếp theo: chuột phải vào từng file .lnk trong $scriptDir -> 'Pin to Start'"

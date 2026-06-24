@@ -1,8 +1,3 @@
-"""
-Đổi nhanh độ phân giải sang 1080x1080 @ 100Hz (Windows only).
-Yêu cầu: pip install pywin32
-"""
-
 import win32api
 import win32con
 
